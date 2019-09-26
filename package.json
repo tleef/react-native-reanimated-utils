@@ -1,0 +1,27 @@
+{
+  "name": "@tleef/react-native-reanimated-utils",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier \"src/**/*.ts\" --write",
+    "prepare": "yarn build"
+  },
+  "repository": "git+https://github.com/tleef/react-native-reanimated-utils.git",
+  "author": "Tom Lee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tleef/react-native-reanimated-utils/issues"
+  },
+  "homepage": "https://github.com/tleef/react-native-reanimated-utils#readme",
+  "peerDependencies": {
+    "react-native-reanimated": "^*"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.3",
+    "@types/react-native": "^0.60.15",
+    "prettier": "^1.18.2",
+    "react-native-reanimated": "^1.2.0",
+    "typescript": "^3.6.3"
+  }
+}
