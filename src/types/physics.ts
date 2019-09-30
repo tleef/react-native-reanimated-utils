@@ -8,6 +8,13 @@ export interface BehaviorXY {
   y: Behavior;
 }
 
+export type Movement = Animated.Node<number> | Array<Animated.Node<number>>;
+
+export interface MovementXY {
+  x: Movement;
+  y: Movement;
+}
+
 export interface Boundary {
   min?: Animated.Adaptable<number>;
   max?: Animated.Adaptable<number>;
