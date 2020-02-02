@@ -1,10 +1,10 @@
 import Animated from "react-native-reanimated";
-import { Transition } from "./Transition";
+import { Driver } from "./Driver";
 import { runSpring } from "../Runners";
 
 const { Value } = Animated;
 
-export interface SpringTransitionConfig {
+export interface SpringDriverConfig {
   stiffness: number;
   mass: number;
   damping: number;
@@ -13,11 +13,11 @@ export interface SpringTransitionConfig {
   restDisplacementThreshold: number;
 }
 
-export class SpringTransition extends Transition {
+export class SpringDriver extends Driver {
   protected readonly _run: Animated.Adaptable<number>;
   protected readonly _rev: Animated.Adaptable<number>;
 
-  constructor(config: SpringTransitionConfig) {
+  constructor(config: SpringDriverConfig) {
     super();
 
     this._run = runSpring(this.clock, this.value, new Value(1), config);

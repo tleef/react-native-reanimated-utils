@@ -12,7 +12,7 @@ const {
   stopClock
 } = Animated;
 
-export abstract class Transition {
+export abstract class Driver {
   private readonly _value: Animated.Value<number>;
   private readonly _direction: Animated.Value<-1 | 0 | 1>;
   private readonly _clock: Animated.Clock;
