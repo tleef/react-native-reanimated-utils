@@ -12,10 +12,7 @@ const {
   spring
 } = Animated;
 
-export interface TimingConfig {
-  duration: Animated.Adaptable<number>;
-  easing: Animated.EasingFunction;
-}
+export type TimingConfig = Omit<Animated.TimingConfig, "toValue">;
 
 export interface ValuedTimingConfig extends TimingConfig {
   toValue: Animated.Value<number>;
@@ -66,14 +63,7 @@ export function runTiming(
   ]);
 }
 
-export interface SpringConfig {
-  damping: Animated.Adaptable<number>;
-  mass: Animated.Adaptable<number>;
-  stiffness: Animated.Adaptable<number>;
-  overshootClamping: Animated.Adaptable<number> | boolean;
-  restSpeedThreshold: Animated.Adaptable<number>;
-  restDisplacementThreshold: Animated.Adaptable<number>;
-}
+export type SpringConfig = Omit<Animated.SpringConfig, "toValue">;
 
 export interface ValuedSpringConfig extends SpringConfig {
   toValue: Animated.Value<number>;
