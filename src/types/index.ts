@@ -18,3 +18,8 @@ export interface AnimatedValueXY<T extends Value> {
   x: Animated.Value<T>;
   y: Animated.Value<T>;
 }
+
+export type StartHandler = () => void;
+export type EndHandler = (cancelled: boolean) => void;
+export type StartListeners = StartHandler[];
+export type EndListeners = EndHandler[];
