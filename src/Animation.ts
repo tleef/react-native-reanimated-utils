@@ -88,7 +88,7 @@ export default class Animation {
     this._leaveEndListeners = [];
   }
 
-  get animValue() {
+  get value() {
     return this._driver.value;
   }
 
